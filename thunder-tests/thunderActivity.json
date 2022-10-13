@@ -148,12 +148,12 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-10-11T21:24:01.942Z",
-    "modified": "2022-10-13T14:44:30.862Z",
+    "modified": "2022-10-13T15:20:49.112Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\": \"ProdutoX\"\n}",
+      "raw": "{\n  \"name\": \"Pro\"\n}",
       "form": []
     },
     "tests": []
