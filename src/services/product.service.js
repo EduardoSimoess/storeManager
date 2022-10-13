@@ -19,7 +19,7 @@ const createProduct = async (name) => {
   }; 
   }
   
-  if (name.length) {
+  if (name.length < 5) {
     return {
       type: 'MIN_LENGTH',
       message: '"name" length must be at least 5 characters long',
