@@ -2,7 +2,6 @@ const productModel = require('../models/product.model');
 
 const findAll = async () => {
   const products = await productModel.findAll();
-
   return products;
 };
 
