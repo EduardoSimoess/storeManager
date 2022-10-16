@@ -144,18 +144,13 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost:3000/products/88",
-    "url": "http://localhost:3000/products",
-    "method": "POST",
+    "url": "http://localhost:3000/sales/4",
+    "method": "GET",
     "sortNum": 0,
     "created": "2022-10-11T21:24:01.942Z",
-    "modified": "2022-10-13T16:36:04.696Z",
+    "modified": "2022-10-16T14:12:12.360Z",
     "headers": [],
     "params": [],
-    "body": {
-      "type": "json",
-      "raw": "{\n  \"name\": \"Produtox\"\n}",
-      "form": []
-    },
     "tests": []
   }
 ]

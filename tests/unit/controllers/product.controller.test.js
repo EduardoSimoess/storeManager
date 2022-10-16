@@ -25,4 +25,27 @@ describe('Verificando o controller dos products', function () {
     expect(res.status).to.have.been.calledWith(200);
     expect(res.json).to.have.been.calledWith(allProducts);
   });
+
+  it('Buscando um produto', async function () {
+    const res = {};
+    const req = {
+      params: {
+        id: 1
+      },
+    };
+
+    res.status = sinon.stub().returns(res);
+    res.json = sinon.stub().returns();
+    sinon
+      .stub(productService, 'findById')
+      .resolves({
+        type: null,
+        message: allProducts[0]
+      });
+
+    await productController.listProductsById(req, res);
+
+    expect(res.status).to.have.been.calledWith(200);
+    expect(res.json).to.have.been.calledWith(allProducts[0]);
+  });
 });

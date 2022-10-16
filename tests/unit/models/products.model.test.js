@@ -16,4 +16,10 @@ describe('Testes unitários para a busca de produtos', function () {
     const results = await productModel.findAll();
     expect(results).to.be.deep.equal(productList);
   });
+
+  it('Recuperando um produto a partir do seu id', async function () {
+    sinon.stub(connection, 'execute').resolves([[productList[0]]]);
+    const result = await productModel.findById(1);
+    expect(result).to.be.deep.equal(productList[0]);
+  });
 });
