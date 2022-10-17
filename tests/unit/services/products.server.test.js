@@ -29,7 +29,7 @@ describe('Verificando service dos produtos', function () {
       sinon.stub(productModel, 'findById').resolves(allProducts[0]);
 
       const result = await productService.findById(1);
-
+      
       expect(result.type).to.equal(null);
       expect(result.message).to.deep.equal(allProducts[0]);
     });

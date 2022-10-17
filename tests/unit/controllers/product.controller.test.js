@@ -44,7 +44,7 @@ describe('Verificando o controller dos products', function () {
       });
 
     await productController.listProductsById(req, res);
-
+    
     expect(res.status).to.have.been.calledWith(200);
     expect(res.json).to.have.been.calledWith(allProducts[0]);
   });
