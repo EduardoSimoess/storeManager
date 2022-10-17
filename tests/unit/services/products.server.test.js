@@ -11,7 +11,7 @@ describe('Verificando service dos produtos', function () {
   describe('listagem de produtos', function () {
     it('retorna a listagem completa de produtos', async function () {
       sinon.stub(productModel, 'findAll').resolves(allProducts);
-      const result = await productModel.findAll();
+      const result = await productService.findAll();
       expect(result).to.be.deep.equal(allProducts);
     });
 

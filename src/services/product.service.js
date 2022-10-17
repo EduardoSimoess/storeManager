@@ -31,8 +31,32 @@ const createProduct = async (name) => {
 
   return { type: null, message: newProduct };
 };
+
+const updateData = async (id, name) => {
+  const product = await productModel.findById(id);
+  if (!product || product.length === 0) {
+    return { type: 'PRODUCT_NOT_FOUND', message: 'Product not found' };
+  }
+  if (!name) {
+    return {
+      type: 'NAME_NOT_INSERTED',
+      message: '"name" is required',
+    };
+  }
+
+  if (name.length < 5) {
+    return {
+      type: 'MIN_LENGTH',
+      message: '"name" length must be at least 5 characters long',
+    };
+  }
+  const update = await productModel.updateData(id, name);
+
+  return { type: null, message: update };
+};
 module.exports = {
   findAll,
   findById,
   createProduct,
+  updateData,
 };
