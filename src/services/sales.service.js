@@ -1,31 +1,4 @@
-// const salesModel = require('../models/sales.model');
 const salesProductModel = require('../models/sales.product.model');
-// const { validadeSale } = require('./validations/validationInpits');
-// const productsModel = require('../models/product.model');
-
-// const noCorrespondingId = {
-//   type: 'PRODUCT_NOT_FOUND',
-//   message: 'Product not found',
-// };
-// const createSail = async (products) => {
-//   const saleId = await salesModel.insert();
-//   const newSale = { id: saleId, itemsSold: products };
-//   let validation = { type: null, message: newSale };
-//   const productList = await productsModel.findAll();
-//   const lastid = productList[productList.length - 1].id;
-//   products.forEach((product) => {
-//     const validationResults = validadeSale(product);
-//     const { productId, quantity } = product;
-//     if (validationResults.type) validation = validationResults;
-//     if (productId < 1 || productId > lastid) validation = noCorrespondingId;
-//     salesProductModel.insert({
-//       saleId,
-//       productId,
-//       quantity,
-//     });
-//   });
-//   return validation;
-// };
 
 const findAll = async () => {
   const salesProducts = await salesProductModel.findAll();
@@ -42,7 +15,6 @@ const findById = async (id) => {
 };
 
 module.exports = {
-  // createSail,
   findAll,
   findById,
 };
